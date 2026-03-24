@@ -1,13 +1,17 @@
 #logo {
-  width: 250px;
+  width: 150px;
+  margin-right: 25px;
+  padding-top: 10px;
+  position: absolute;
+}
+
+#fototubarao {
+  display: flex;
+  justify-content: flex-end;
 }
 
 body {
   color: rgb(224, 224, 224);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
   height: 100vh;
   margin: 0;
   background: linear-gradient(135deg, #002c53, #010c22);
@@ -17,19 +21,25 @@ h1 {
   font-size: 40px;
 }
 
-.menu {
+#textocentro {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  justify-content: center;
+}
+
+#menu {
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+  margin-top: 15px;
+  margin-left: 10px;
 }
 
 button {
   cursor: pointer;
   transition: 0.1s ease;
-  width: 150px;
-  height: 32px;
-  font-size: 17px;
-  padding: 5px;
+  width: 200px;
+  height: 40px;
+  font-size: 20px;
   border-radius: 8px;
   border: none;
   background-color: rgb(15, 41, 122);
@@ -47,9 +57,77 @@ button:active {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
-.container {
+h2 {
+  font-size: 35px;
+}
+
+.textosecao {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+}
+
+#caixacarrinho {
+  background: rgba(255, 255, 255, 0.95);
+  width: 500px;
+  min-height: 300px;
+
+  padding: 15px;
+  border-radius: 10px;
+
+  margin-top: 20px;
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+  overflow-y: auto;
+}
+
+.centralizador {
+  display: flex;
   align-items: center;
-  margin-bottom: 120px;
+  justify-content: center;
+}
+
+#carrinho {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+span {
+  color: black;
+}
+
+.editarvenda {
+  font-size: 12px;
+  width: 50px;
+  height: 25px;
+}
+
+#infovendas {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+#referenciaproduto {
+  width: 400px;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+}
+
+#totalvendas {
+  font-size: 20px;
+}
+
+#precototalvenda {
+  font-size: 20px;
+  color: white;
+}
+
+.secao {
+  display: none;
 }

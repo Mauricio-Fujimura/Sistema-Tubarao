@@ -7,22 +7,59 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
+    <div id="fototubarao">
       <img src="fototubarao.png" alt="logo do tubarão" id="logo" />
+    </div>
+
+    <div id="menu">
+      <button id="botaovender" class="botao" onclick="mostrar('vendas')">
+        Vender
+      </button>
+      <button id="botaoestoque" class="botao" onclick="mostrar('estoque')">
+        Estoque
+      </button>
+      <button id="botaohistorico" class="botao" onclick="mostrar('historico')">
+        Historico Vendas
+      </button>
+      <button id="botaocaixa" class="botao" onclick="mostrar('caixa')">
+        Caixa
+      </button>
+    </div>
+    <div id="textocentro">
       <h1>Menu Tubarão</h1>
-      <div class="menu">
-        <a href="vender.html">
-          <button id="botaovender" class="botao">Vender</button>
-        </a>
-        <a href="estoque.html">
-          <button id="botaoestoque" class="botao">Estoque</button>
-        </a>
-        <a href="historicovendas.html">
-          <button id="botaohistorico" class="botao">Historico Vendas</button>
-        </a>
-        <a href="caixa.html">
-          <button id="botaocaixa" class="botao">Caixa</button>
-        </a>
+    </div>
+
+    <div id="conteudo">
+      <div id="vendas" class="secao">
+        <div class="textosecao">
+          <h2>Vendas</h2>
+        </div>
+
+        <div class="centralizador">
+          <div id="caixacarrinho">
+            <ul id="carrinho">
+              <li class="produtocarrinho">
+                <span>nome</span>
+                <span>quantidade</span>
+                <span>preco</span>
+                <button class="editarvenda">Editar</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="infovendas">
+          <input
+            type="text"
+            id="referenciaproduto"
+            placeholder="Digite o nome ou refencia do produto"
+          />
+
+          <p id="totalvendas">Total</p>
+          <span id="precototalvenda">R$0.00</span>
+
+          <button id="encerrarvenda">Encerrar Venda</button>
+        </div>
       </div>
     </div>
 
