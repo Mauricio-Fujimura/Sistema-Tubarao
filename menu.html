@@ -12,16 +12,36 @@
     </div>
 
     <div id="menu">
-      <button id="botaovender" class="botao" onclick="mostrar('vendas')">
+      <button
+        class="botoesprincipais"
+        id="botaovender"
+        class="botao"
+        onclick="mostrar('vendas')"
+      >
         Vender
       </button>
-      <button id="botaoestoque" class="botao" onclick="mostrar('estoque')">
+      <button
+        class="botoesprincipais"
+        id="botaoestoque"
+        class="botao"
+        onclick="mostrar('estoque')"
+      >
         Estoque
       </button>
-      <button id="botaohistorico" class="botao" onclick="mostrar('historico')">
+      <button
+        class="botoesprincipais"
+        id="botaohistorico"
+        class="botao"
+        onclick="mostrar('historico')"
+      >
         Historico Vendas
       </button>
-      <button id="botaocaixa" class="botao" onclick="mostrar('caixa')">
+      <button
+        class="botoesprincipais"
+        id="botaocaixa"
+        class="botao"
+        onclick="mostrar('caixa')"
+      >
         Caixa
       </button>
     </div>
@@ -37,7 +57,7 @@
 
         <div class="centralizador">
           <div id="caixasecao">
-            <ul id="carrinho">
+            <ul id="carrinho" class="listadados">
               <li class="produtocarrinho">
                 <span>nome</span>
                 <span>quantidade</span>
@@ -68,7 +88,7 @@
         </div>
         <div class="centralizador">
           <div id="caixasecao">
-            <ul id="listaestoque">
+            <ul id="listaestoque" class="listadados">
               <li id="produtosestoque">
                 <span>nome</span>
                 <span>preco</span>
@@ -122,6 +142,52 @@
                 placeholder="Id produto (opcional)"
               />
               <button type="submit">Adicionar produto</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div id="historico" class="secao">
+        <div class="textosecao">
+          <h2>Historico Vendas</h2>
+        </div>
+        <div class="centralizador">
+          <div id="caixasecao">
+            <ul id="listahistorico" class="listadados">
+              <li id="historicododia">
+                <span>Nenhuma venda realizada</span>
+                <button class="editarhistorico">Editar Historico</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="organizainfo">
+          <div id="infohistorico">
+            <input
+              id="pesquisahistorico"
+              type="text"
+              placeholder="Pesquisar dia"
+            />
+            <button id="pesquisarhistorico">Pesquisar</button>
+          </div>
+          <button
+            id="pesquisaroutrodia"
+            onclick="mostarmodal('janelahistoricos')"
+          >
+            Pesquisar outro dia
+          </button>
+        </div>
+
+        <div id="janelahistoricos" class="modal">
+          <div class="caixamodal">
+            <form class="organizapesquisa">
+              <label for="pesquisadehistorico">Pesquisar dia</label>
+              <input
+                id="pesquisadehistorico"
+                type="text"
+                placeholder="Digite o dia do historico"
+              />
+              <button type="submit" id="confirmarpesquisa">Pesquisar</button>
             </form>
           </div>
         </div>

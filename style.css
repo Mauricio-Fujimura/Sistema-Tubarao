@@ -87,7 +87,7 @@ h2 {
   justify-content: center;
 }
 
-#carrinho {
+.listadados {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
@@ -192,4 +192,43 @@ span {
   width: 350px;
   height: 25px;
   font-size: 15px;
+}
+
+.editarhistorico {
+  width: 90px;
+  font-size: 15px;
+}
+
+#infohistorico {
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-direction: row;
+}
+
+#historicododia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#listahistorico.listadados {
+  margin-left: 115px;
+}
+
+#pesquisahistorico {
+  width: 500px;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+}
+
+.organizainfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
