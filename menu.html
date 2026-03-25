@@ -36,19 +36,19 @@
         </div>
 
         <div class="centralizador">
-          <div id="caixacarrinho">
+          <div id="caixasecao">
             <ul id="carrinho">
               <li class="produtocarrinho">
                 <span>nome</span>
                 <span>quantidade</span>
                 <span>preco</span>
-                <button class="editarvenda">Editar</button>
+                <button class="editarproduto">Editar</button>
               </li>
             </ul>
           </div>
         </div>
 
-        <div id="infovendas">
+        <div id="infosecao">
           <input
             type="text"
             id="referenciaproduto"
@@ -59,6 +59,71 @@
           <span id="precototalvenda">R$0.00</span>
 
           <button id="encerrarvenda">Encerrar Venda</button>
+        </div>
+      </div>
+
+      <div id="estoque" class="secao">
+        <div class="textosecao">
+          <h2>Estoque</h2>
+        </div>
+        <div class="centralizador">
+          <div id="caixasecao">
+            <ul id="listaestoque">
+              <li id="produtosestoque">
+                <span>nome</span>
+                <span>preco</span>
+                <span>quantidade</span>
+                <span>Id</span>
+                <button class="editarproduto">Editar</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="infoestoque">
+          <input
+            id="pesquisaproduto"
+            type="text"
+            placeholder="Pesquisar produto"
+          />
+          <button
+            id="botaoaddestoque"
+            onclick="mostramodal('adicionarproduto')"
+          >
+            Adicionar Produto
+          </button>
+        </div>
+
+        <div id="adicionarproduto" class="modal">
+          <div class="caixamodal">
+            <form id="itensaddestoque">
+              <input
+                id="nomeproduto"
+                type="text"
+                placeholder="Nome do Produto"
+                class="inputmodal"
+              />
+              <input
+                id="quantidadeproduto"
+                type="text"
+                placeholder="Quantidade do produto"
+                class="inputmodal"
+              />
+              <input
+                id="addprecoproduto"
+                type="text"
+                placeholder="Preço do produto"
+                class="inputmodal"
+              />
+              <input
+                class="inputmodal"
+                id="addidproduto"
+                type="text"
+                placeholder="Id produto (opcional)"
+              />
+              <button type="submit">Adicionar produto</button>
+            </form>
+          </div>
         </div>
       </div>
     </div>
