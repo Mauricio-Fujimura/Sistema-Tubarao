@@ -76,9 +76,60 @@
           />
 
           <p id="totalvendas">Total</p>
-          <span id="precototalvenda">R$0.00</span>
+          <span class="precototalvenda">R$0.00</span>
 
-          <button id="encerrarvenda">Encerrar Venda</button>
+          <button id="encerrarvenda" onclick="mostramodal('modalencerravenda')">
+            Encerrar Venda
+          </button>
+        </div>
+
+        <div id="modalencerravenda" class="modal">
+          <div class="caixamodal">
+            <div class="organizaencerravenda">
+              <span class="totalmodal">Total: R$0.00</span>
+              <p id="formataformadepagamento">Forma de pagamento</p>
+              <div id="organizapagamento">
+                <button
+                  id="pagamentodinheiro"
+                  class="botaoformapagamento"
+                  onclick="mostramodal('encerradefinitiva')"
+                >
+                  Dinheiro
+                </button>
+                <button
+                  id="pagamentocartao"
+                  class="botaoformapagamento"
+                  onclick="mostramodal('encerradefinitiva')"
+                >
+                  Cartão
+                </button>
+                <button
+                  id="pagamentopix"
+                  class="botaoformapagamento"
+                  onclick="mostramodal('encerradefinitiva')"
+                >
+                  Pix
+                </button>
+              </div>
+            </div>
+
+            <div id="encerradefinitiva" class="modal">
+              <div class="caixamodal">
+                <ul id="carrinho" class="listadados">
+                  <li class="produtocarrinho">
+                    <span>nome</span>
+                    <span>quantidade</span>
+                    <span>preco</span>
+                  </li>
+                </ul>
+                <div id="centralizaencerravenda">
+                  <span class="totalmodal">R$0,00</span>
+                  <span id="pagamentoescolhido">Forma de pagamento</span>
+                  <button id="botaoencerradefinitiva">Encerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -172,7 +223,7 @@
           </div>
           <button
             id="pesquisaroutrodia"
-            onclick="mostarmodal('janelahistoricos')"
+            onclick="mostramodal('janelahistoricos')"
           >
             Pesquisar outro dia
           </button>
@@ -180,15 +231,49 @@
 
         <div id="janelahistoricos" class="modal">
           <div class="caixamodal">
-            <form class="organizapesquisa">
-              <label for="pesquisadehistorico">Pesquisar dia</label>
+            <div class="organizapesquisa">
               <input
                 id="pesquisadehistorico"
                 type="text"
                 placeholder="Digite o dia do historico"
               />
-              <button type="submit" id="confirmarpesquisa">Pesquisar</button>
-            </form>
+              <button id="confirmarpesquisa">Pesquisar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="caixa" class="secao">
+        <div class="textosecao">
+          <h2>Caixa</h2>
+        </div>
+        <div class="centralizador">
+          <div id="caixasecao">
+            <div id="textovendascaixa">
+              <p>Vendas:</p>
+            </div>
+            <div id="organizatotalcaixa">
+              <div class="totalebotao">
+                <span class="spancaixa">Dinheiro: R$0.00</span>
+                <button class="botaover">Ver</button>
+              </div>
+              <div class="totalebotao">
+                <span class="spancaixa">Cartão: R$0.00</span>
+                <button class="botaover">Ver</button>
+              </div>
+              <div class="totalebotao">
+                <span class="spancaixa">Pix: R$0.00</span>
+                <button class="botaover">Ver</button>
+              </div>
+              <span id="spantotalcaixa">Total: R$0.00</span>
+            </div>
+          </div>
+        </div>
+        <div id="infocaixa">
+          <button id="addtroco" class="botaoinfocaixa">Adicionar troco</button>
+          <button id="sangria" class="botaoinfocaixa">Sangria</button>
+          <div id="caixatroco">
+            <span id="troco">Troco: R$0.00</span>
           </div>
         </div>
       </div>

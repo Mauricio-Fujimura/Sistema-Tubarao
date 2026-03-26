@@ -123,7 +123,7 @@ span {
   font-size: 20px;
 }
 
-#precototalvenda {
+.precototalvenda {
   font-size: 20px;
   color: white;
 }
@@ -231,4 +231,130 @@ span {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+#pesquisadehistorico {
+  width: 350px;
+  height: 30px;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+#confirmarpesquisa {
+  height: 35px;
+}
+
+.totalmodal {
+  color: black;
+  font-size: 30px;
+}
+
+.organizaencerravenda {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#formataformadepagamento {
+  color: black;
+  font-size: 20px;
+}
+
+#organizapagamento {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.produtocarrinho {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  font-size: 17px;
+}
+
+#centralizaencerravenda {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;
+}
+
+#pagamentoescolhido {
+  font-size: 17px;
+  color: black;
+}
+
+#textovendascaixa {
+  display: flex;
+  justify-content: center;
+  color: black;
+  font-size: 25px;
+}
+#organizatotalcaixa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.spancaixa {
+  font-size: 17px;
+  color: black;
+}
+
+.botaover {
+  width: 50px;
+  height: 25px;
+  font-size: 15px;
+}
+
+#spantotalcaixa {
+  margin-top: 30px;
+  font-size: 20px;
+  color: black;
+}
+
+#infocaixa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.botaoinfocaixa {
+  width: 150px;
+  font-size: 17px;
+  height: 35px;
+}
+
+#caixatroco {
+  display: flex;
+  font-size: 20px;
+  background: white;
+  width: 150px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#sangria.botaoinfocaixa:hover {
+  transition: 0.5 ease;
+  transform: scale(1.05);
+  background-color: red;
+  box-shadow: 0 0 10px rgba(255, 46, 46, 0.7);
+}
+
+#sangria.botaoinfocaixa:active {
+  transition: 0.5 ease;
+  transform: scale(0.95);
+  background-color: red;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
 }
