@@ -358,3 +358,82 @@ span {
   background-color: red;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
 }
+
+#caixaumvalor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.umvalor {
+  width: 400px;
+  height: 30px;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+#confirmasangria {
+  background-color: red;
+  color: white;
+  box-shadow: 0 0 10px rgba(255, 46, 46, 0.7);
+}
+
+.editelementos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.inputedits {
+  width: 100px;
+  height: 25px;
+}
+.elementosedits {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.bordanome {
+  width: 50px;
+  height: 20px;
+}
+
+#totaleditvendas {
+  font-size: 20px;
+}
+
+#vervendas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 17px;
+}
+
+#formapagamento {
+  font-size: 20px;
+}
+
+#listaver {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#listaver {
+  font-size: 20px;
+}
+
+#adicionarvenda {
+  font-size: 12px;
+  width: 50px;
+  height: 25px;
+}

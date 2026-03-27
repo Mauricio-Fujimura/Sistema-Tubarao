@@ -62,7 +62,12 @@
                 <span>nome</span>
                 <span>quantidade</span>
                 <span>preco</span>
-                <button class="editarproduto">Editar</button>
+                <button
+                  class="editarproduto"
+                  onclick="mostramodal('editvendas')"
+                >
+                  Editar
+                </button>
               </li>
             </ul>
           </div>
@@ -74,6 +79,7 @@
             id="referenciaproduto"
             placeholder="Digite o nome ou refencia do produto"
           />
+          <button id="adicionarvenda">Add</button>
 
           <p id="totalvendas">Total</p>
           <span class="precototalvenda">R$0.00</span>
@@ -115,18 +121,22 @@
 
             <div id="encerradefinitiva" class="modal">
               <div class="caixamodal">
-                <ul id="carrinho" class="listadados">
-                  <li class="produtocarrinho">
-                    <span>nome</span>
-                    <span>quantidade</span>
-                    <span>preco</span>
-                  </li>
-                </ul>
-                <div id="centralizaencerravenda">
-                  <span class="totalmodal">R$0,00</span>
-                  <span id="pagamentoescolhido">Forma de pagamento</span>
-                  <button id="botaoencerradefinitiva">Encerrar</button>
-                </div>
+                <form>
+                  <ul id="carrinho" class="listadados">
+                    <li class="produtocarrinho">
+                      <span>nome</span>
+                      <span>quantidade</span>
+                      <span>preco</span>
+                    </li>
+                  </ul>
+                  <div id="centralizaencerravenda">
+                    <span class="totalmodal">R$0,00</span>
+                    <span id="pagamentoescolhido">Forma de pagamento</span>
+                    <button id="botaoencerradefinitiva" type="submit">
+                      Encerrar
+                    </button>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
@@ -142,10 +152,15 @@
             <ul id="listaestoque" class="listadados">
               <li id="produtosestoque">
                 <span>nome</span>
-                <span>preco</span>
                 <span>quantidade</span>
+                <span>preco</span>
                 <span>Id</span>
-                <button class="editarproduto">Editar</button>
+                <button
+                  class="editarproduto"
+                  onclick="mostramodal('editestoque')"
+                >
+                  Editar
+                </button>
               </li>
             </ul>
           </div>
@@ -207,7 +222,6 @@
             <ul id="listahistorico" class="listadados">
               <li id="historicododia">
                 <span>Nenhuma venda realizada</span>
-                <button class="editarhistorico">Editar Historico</button>
               </li>
             </ul>
           </div>
@@ -219,26 +233,7 @@
               type="text"
               placeholder="Pesquisar dia"
             />
-            <button id="pesquisarhistorico">Pesquisar</button>
-          </div>
-          <button
-            id="pesquisaroutrodia"
-            onclick="mostramodal('janelahistoricos')"
-          >
-            Pesquisar outro dia
-          </button>
-        </div>
-
-        <div id="janelahistoricos" class="modal">
-          <div class="caixamodal">
-            <div class="organizapesquisa">
-              <input
-                id="pesquisadehistorico"
-                type="text"
-                placeholder="Digite o dia do historico"
-              />
-              <button id="confirmarpesquisa">Pesquisar</button>
-            </div>
+            <button id="pesquisarhistorico">Pesquisar outro dia</button>
           </div>
         </div>
       </div>
@@ -255,25 +250,156 @@
             <div id="organizatotalcaixa">
               <div class="totalebotao">
                 <span class="spancaixa">Dinheiro: R$0.00</span>
-                <button class="botaover">Ver</button>
+                <button
+                  class="botaover"
+                  onclick="mostramodal('verformapagamento')"
+                >
+                  Ver
+                </button>
               </div>
               <div class="totalebotao">
                 <span class="spancaixa">Cartão: R$0.00</span>
-                <button class="botaover">Ver</button>
+                <button
+                  class="botaover"
+                  onclick="mostramodal('verformapagamento')"
+                >
+                  Ver
+                </button>
               </div>
               <div class="totalebotao">
                 <span class="spancaixa">Pix: R$0.00</span>
-                <button class="botaover">Ver</button>
+                <button
+                  class="botaover"
+                  onclick="mostramodal('verformapagamento')"
+                >
+                  Ver
+                </button>
               </div>
               <span id="spantotalcaixa">Total: R$0.00</span>
             </div>
           </div>
         </div>
         <div id="infocaixa">
-          <button id="addtroco" class="botaoinfocaixa">Adicionar troco</button>
-          <button id="sangria" class="botaoinfocaixa">Sangria</button>
+          <button
+            id="addtroco"
+            class="botaoinfocaixa"
+            onclick="mostramodal('adicionatroco')"
+          >
+            Adicionar troco
+          </button>
+          <button
+            id="sangria"
+            class="botaoinfocaixa"
+            onclick="mostramodal('modalsangria')"
+          >
+            Sangria
+          </button>
           <div id="caixatroco">
             <span id="troco">Troco: R$0.00</span>
+          </div>
+        </div>
+
+        <div id="adicionatroco" class="modal">
+          <div class="caixamodal">
+            <form id="caixaumvalor">
+              <input
+                id="quantidadetroco"
+                class="umvalor"
+                type="text"
+                placeholder="R$:"
+              />
+              <button type="submit">Adicionar troco</button>
+            </form>
+          </div>
+        </div>
+
+        <div id="modalsangria" class="modal">
+          <div class="caixamodal">
+            <form id="caixaumvalor">
+              <input
+                id="quantidadesubtraida"
+                class="umvalor"
+                type="text"
+                placeholder="R$:"
+              />
+              <button type="submit" id="confirmasangria">Fazer sangria</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div id="editvendas" class="modal">
+        <div class="caixamodal">
+          <div class="editelementos">
+            <div class="elementosedits">
+              <div class="bordanome">
+                <span id="nomeeditvendas">nome:</span>
+              </div>
+              <input
+                id="editquantidadevendas"
+                type="text"
+                placeholder="Quantidade:"
+                class="inputedits"
+              />
+              <input
+                id="editprecovendas"
+                type="text"
+                placeholder="Preco"
+                class="inputedits"
+              />
+            </div>
+            <span id="totaleditvendas">Total: R$0.00</span>
+            <button id="confirmaredit">Confirmar</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="editestoque" class="modal">
+        <div class="caixamodal">
+          <form>
+            <div class="editelementos">
+              <div class="elementosedits">
+                <input
+                  id="editnomeestoque"
+                  type="text"
+                  placeholder="nome:"
+                  class="inputedits"
+                />
+                <input
+                  id="editquantidadeestoque"
+                  type="text"
+                  placeholder="Quantidade:"
+                  class="inputedits"
+                />
+                <input
+                  id="editprecoestoque"
+                  type="text"
+                  placeholder="Preço:"
+                  class="inputedits"
+                />
+                <input
+                  id="editidestoque"
+                  type="text"
+                  placeholder="ID:"
+                  class="inputedits"
+                />
+              </div>
+              <button id="confirmaredit" type="submit">Confirmar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div id="verformapagamento" class="modal">
+        <div class="caixamodal">
+          <div id="listaver">
+            <span id="formapagamento">Forma de pagamento</span>
+
+            <ul id="vervendas">
+              <li>Nenhuma venda</li>
+            </ul>
+            <span id="totalver">Total: R$0.00</span>
+            <button id="botaook">OK</button>
           </div>
         </div>
       </div>
