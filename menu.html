@@ -12,36 +12,16 @@
     </div>
 
     <div id="menu">
-      <button
-        class="botoesprincipais"
-        id="botaovender"
-        class="botao"
-        onclick="mostrar('vendas')"
-      >
+      <button class="botoesprincipais" id="botaovender" class="botao">
         Vender
       </button>
-      <button
-        class="botoesprincipais"
-        id="botaoestoque"
-        class="botao"
-        onclick="mostrar('estoque')"
-      >
+      <button class="botoesprincipais" id="botaoestoque" class="botao">
         Estoque
       </button>
-      <button
-        class="botoesprincipais"
-        id="botaohistorico"
-        class="botao"
-        onclick="mostrar('historico')"
-      >
+      <button class="botoesprincipais" id="botaohistorico" class="botao">
         Historico Vendas
       </button>
-      <button
-        class="botoesprincipais"
-        id="botaocaixa"
-        class="botao"
-        onclick="mostrar('caixa')"
-      >
+      <button class="botoesprincipais" id="botaocaixa" class="botao">
         Caixa
       </button>
     </div>
@@ -62,10 +42,7 @@
                 <span>nome</span>
                 <span>quantidade</span>
                 <span>preco</span>
-                <button
-                  class="editarproduto"
-                  onclick="mostramodal('editvendas')"
-                >
+                <button id="editarprodutovenda" class="editarproduto">
                   Editar
                 </button>
               </li>
@@ -118,27 +95,26 @@
                 </button>
               </div>
             </div>
-
-            <div id="encerradefinitiva" class="modal">
-              <div class="caixamodal">
-                <form>
-                  <ul id="carrinho" class="listadados">
-                    <li class="produtocarrinho">
-                      <span>nome</span>
-                      <span>quantidade</span>
-                      <span>preco</span>
-                    </li>
-                  </ul>
-                  <div id="centralizaencerravenda">
-                    <span class="totalmodal">R$0,00</span>
-                    <span id="pagamentoescolhido">Forma de pagamento</span>
-                    <button id="botaoencerradefinitiva" type="submit">
-                      Encerrar
-                    </button>
-                  </div>
-                </form>
+          </div>
+        </div>
+        <div id="encerradefinitiva" class="modal">
+          <div class="caixamodal">
+            <form>
+              <ul id="carrinho" class="listadados">
+                <li class="produtocarrinho">
+                  <span>nome</span>
+                  <span>quantidade</span>
+                  <span>preco</span>
+                </li>
+              </ul>
+              <div id="centralizaencerravenda">
+                <span class="totalmodal">R$0,00</span>
+                <span id="pagamentoescolhido">Forma de pagamento</span>
+                <button id="botaoencerradefinitiva" type="submit">
+                  Encerrar
+                </button>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>
@@ -154,8 +130,9 @@
                 <span>nome</span>
                 <span>quantidade</span>
                 <span>preco</span>
-                <span>Id</span>
+                <span>Ref</span>
                 <button
+                  id="editarestoque"
                   class="editarproduto"
                   onclick="mostramodal('editestoque')"
                 >
@@ -203,11 +180,13 @@
               />
               <input
                 class="inputmodal"
-                id="addidproduto"
+                id="addrefproduto"
                 type="text"
-                placeholder="Id produto (opcional)"
+                placeholder="Ref produto (opcional)"
               />
-              <button type="submit">Adicionar produto</button>
+              <button type="submit" id="botaocriarproduto">
+                Adicionar produto
+              </button>
             </form>
           </div>
         </div>
@@ -405,6 +384,6 @@
       </div>
     </div>
 
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
   </body>
 </html>
